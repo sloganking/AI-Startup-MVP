@@ -13,8 +13,8 @@
 
 ## Setup
 ``` 
-git clone https://github.com/anfederico/Flaskex
-cd Flaskex
+git clone https://github.com/SleepingFox88/AI-Startup-MVP
+cd AI-Startup-MVP
 pip install -r requirements.txt
 python app.py
 ```
