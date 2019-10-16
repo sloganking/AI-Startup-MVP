@@ -4,12 +4,17 @@ from scripts import tabledef
 from scripts import forms
 from scripts import helpers
 from flask import Flask, redirect, url_for, render_template, request, session
-import json
-import sys
-import os
+import json, sys, os, stripe
 
 app = Flask(__name__)
 app.secret_key = os.urandom(12)  # Generic key for dev purposes only
+
+# Using Stripe Test API Keys.
+with open('stripeInfo.json') as f:
+    d = json.load(f)
+pub_key = d["public_key"]
+sec_key = d["secret_key"]
+stripe.api_key = sec_key
 
 # Heroku
 #from flask_heroku import Heroku
